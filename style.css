@@ -227,7 +227,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .skill {
@@ -256,12 +256,21 @@ section {
 .html i { color: #E34F26; }           
 .css i { color: #1572B6; }            
 .js i { color: #F7DF1E; }             
-.bootstrap i { color: #7952B3; }      
+.bootstrap i { color: #7952B3; }
+.skill.jquery i {color: #0868AC;}
 .angular i { color: #DD0031; } 
 .sql i { color: #CC2927; }           
 .csharp i { color: #9B4F96; }        
 .entity-framework i { color: #007396; } 
 .mvc i { color: #5A9FD4; }            
+.skill.git i { color: #F05032; }
+.skill.github i {color: #333; }
+.skill.typescript i {color: #3178C6; }
+.skill.signalr i {color: #6A6A6A; }
+.skill.aspnet-core i {color: #512BD4; }
+.skill.json i {color: #f7df1e; }
+.skill.sass i {color: #CF649A;}
+.skill.oop i {color: #4305ee;}
 
 
 .contact .icon{
@@ -272,9 +281,14 @@ section {
     color: #000;
 }
 
-.contact .info p {
+.contact .info  p  {
     font-size: 1em;
+
 }
+.contact .card .info a{
+    text-decoration: none;
+    color: #000;
+} 
 
 .social-icons a i {
     font-size: 1.4em;
@@ -311,55 +325,173 @@ section {
     padding: 0 12px 0 0;
 }
 
-@media (max-width:1023px){
-    header{
+/* General Mobile and Tablet Styles */
+@media (max-width: 1024px) {
+    header {
         padding: 12px 20px;
     }
 
-    .navigation a{
+    .navigation a {
         padding-left: 10px;
+        font-size: 0.9em;
     }
 
-    .title{
+    .title {
         font-size: 1.8em;
     }
 
-    section{
+    section {
         padding: 80px 20px;
     }
 
-    .main-content h2{
+    .main h2 {
         font-size: 1em;
     }
 
-    .main-content h3{
-        font-size: 1.6em;
+    .main h3 {
+        font-size: 1.2em;
     }
 
-    .content{
+    .content, .projects .content {
         flex-direction: column;
         align-items: center;
     }
 
+    .card, .project-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .social-icons a {
+        font-size: 1.2em;
+    }
+
+    .skills-content {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 10px; 
+    }
+
+    .skill {
+        width: 100px; 
+        margin: 5px; 
+    }
+
+    .skill i {
+        font-size: 2em; 
+        margin-bottom: 5px;
+    }
+
+    .skill span {
+        font-size: 0.9em; 
+        text-align: center;
+    }
 }
 
-@media (max-width:641px){
-    body{
+/* Mobile (under 640px) */
+@media (max-width: 640px) {
+    body {
         font-size: 12px;
     }
 
-    .main-content h2{
-        font-size: 0.8em;
+    .main h2 {
+        font-size: 0.9em;
     }
 
-    .main-content h3{
-        font-size: 1.4em;
+    .main h3 {
+        font-size: 1.1em;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-title {
+        font-size: 1.2em;
+    }
+    .skills-content {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .skill {
+        width: 80px; 
+        margin: 8px; 
+    }
+
+    .skill i {
+        font-size: 2em; 
+    }
+
+    .skill span {
+        font-size: 0.9em; 
     }
 }
 
-@media (max-width:300px){
-    body{
+/* Very Small Mobile (300px and up) */
+@media (min-width: 300px) and (max-width: 480px) {
+    body {
         font-size: 10px;
-     
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .navigation a {
+        font-size: 0.8em;
+    }
+
+    section {
+        padding: 50px 10px;
+    }
+
+    .main h2 {
+        font-size: 0.8em;
+    }
+
+    .main h3 {
+        font-size: 1em;
+    }
+
+    .card, .project-card {
+        width: 95%;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-title {
+        font-size: 1em;
+    }
+    .skills-content {
+        justify-content: center;
+    }
+
+    .skill {
+        width: 60px; 
+        margin: 5px;
+    }
+
+    .skill i {
+        font-size: 1.5em; 
+    }
+
+    .skill span {
+        font-size: 0.8em; 
     }
 }
